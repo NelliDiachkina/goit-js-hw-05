@@ -1,6 +1,6 @@
-function testResult(getTotalBalanceByGender) {
-  console.log(getTotalBalanceByGender(clients, 'male')); // 12053
-  console.log(getTotalBalanceByGender(clients, 'female')); // 8863
+function testResult(data, getDataFunction) {
+  console.log(getDataFunction(data, 'male')); // 12053
+  console.log(getDataFunction(data, 'female')); // 8863
 }
 
 const clients = [
@@ -41,4 +41,4 @@ const clients = [
   },
 ];
 
-export default testResult;
+export { clients, testResult };

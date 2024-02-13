@@ -1,3 +1,29 @@
+function testResult(data, getDataFunction) {
+  console.log(getDataFunction(data, 'Briana Decker'));
+  // [
+  //   {
+  //     name: "Sharlene Bush",
+  //     friends: ["Briana Decker", "Sharron Pace"]
+  //   },
+  //   {
+  //     name: "Sheree Anthony",
+  //     friends: ["Goldie Gentry", "Briana Decker"]
+  //   }
+  // ]
+  console.log(getDataFunction(data, 'Goldie Gentry'));
+  // [
+  //   {
+  //     name: "Elma Head",
+  //     friends: ["Goldie Gentry", "Aisha Tran"]
+  //   },
+  //   {
+  //     name: "Sheree Anthony",
+  //     friends: ["Goldie Gentry", "Briana Decker"]
+  //   }
+  // ]
+  console.log(getDataFunction(data, 'Adrian Cross')); // []
+}
+
 const allUsers = [
   {
     name: 'Moore Hensley',
@@ -29,30 +55,4 @@ const allUsers = [
   },
 ];
 
-function testResult(getUsersWithFriend) {
-  console.log(getUsersWithFriend(allUsers, 'Briana Decker'));
-  // [
-  //   {
-  //     name: "Sharlene Bush",
-  //     friends: ["Briana Decker", "Sharron Pace"]
-  //   },
-  //   {
-  //     name: "Sheree Anthony",
-  //     friends: ["Goldie Gentry", "Briana Decker"]
-  //   }
-  // ]
-  console.log(getUsersWithFriend(allUsers, 'Goldie Gentry'));
-  // [
-  //   {
-  //     name: "Elma Head",
-  //     friends: ["Goldie Gentry", "Aisha Tran"]
-  //   },
-  //   {
-  //     name: "Sheree Anthony",
-  //     friends: ["Goldie Gentry", "Briana Decker"]
-  //   }
-  // ]
-  console.log(getUsersWithFriend(allUsers, 'Adrian Cross')); // []
-}
-
-export default testResult;
+export { allUsers, testResult };
